@@ -11,15 +11,17 @@
   "dependencies": {
     "@prismicio/client": "5.1.0",
     "@prismicio/helpers": "^2.3.6",
+    "@react-native-async-storage/async-storage": "^1.17.11",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
+    "firebase": "^9.15.0",
     "next": "13.0.6",
     "node-fetch": "^3.3.0",
     "prismic-dom": "^2.2.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^6.5.0",
     "sass": "^1.56.2"
   },
   "devDependencies": {
