@@ -1,7 +1,7 @@
 
 import styles from './styles.module.scss';
 import Image from 'next/image';
-import logo from '../../../public/images/logo.svg';
+import logo from '../../../public/images/logo.png';
 
 import {ActiveLink} from '../ActiveLink';
 
@@ -12,7 +12,7 @@ export default function Header(){
         
         <ActiveLink legacyBehavior href="/" activeClassName={styles.active}>
           <a>
-          <Image src={logo} alt="Logo"/>
+          <Image src={logo} alt="Logo" width={299} height={85}/>
           </a>          
         </ActiveLink>
 
