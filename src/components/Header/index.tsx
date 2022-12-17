@@ -29,7 +29,7 @@ export default function Header(){
           </ActiveLink>
         </nav>
 
-        <a className={styles.readyButton} type="button" href="https://github.com/kassiobruno">COMEÇAR</a>
+        <a className={styles.readyButton} type="button" href="/login">Fazer Login</a>
 
       </div>
     </header>

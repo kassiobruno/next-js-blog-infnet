@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/home.module.scss'
 import Image from 'next/image';
 import techsImage from '../../public/images/techs.svg';
-
+import Link from 'next/link';
 import {getPrismicClient} from '../services/prismic';
 import { GetStaticProps } from 'next';
 
@@ -39,7 +39,7 @@ export default function Home({ content }: ContentProps) {
 
           <section className={styles.ctaText}>
             <h1>{content.title}</h1>
-            <span>{content.titleContent}</span>
+            <span>{content.titleContent}</span><br/>
             <a href={content.linkAction}>
               <button>
                 COMEÇAR AGORA!
@@ -70,7 +70,7 @@ export default function Home({ content }: ContentProps) {
 
         <div className={styles.sectionContent}>
 
-        <picture><img src={content.webBanner} alt='conteudo web'/></picture>
+        <picture><img src={content.webBanner} alt='conteudo web' style={{padding: "20px"}}/></picture>
 
           <section>
             <h2>{content.webTitle}</h2>
@@ -85,9 +85,9 @@ export default function Home({ content }: ContentProps) {
           <h2>Mais de <span className={styles.alunos}>15 mil</span> já levaram sua carreira ao próximo nivel.</h2>
           <span>E você vai perder a chance de evoluir de uma vez por todas?</span>
 
-          <a href={content.linkAction}>
+          <Link href="/login">
             <button>COMEÇAR AGORA</button>
-          </a>
+          </Link>
         </div>
 
       </main>

@@ -19,10 +19,13 @@
     "node-fetch": "^3.3.0",
     "prismic-dom": "^2.2.7",
     "react": "18.2.0",
+    "react-activity-indicator": "^0.7.77",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.5.0",
-    "sass": "^1.56.2"
+    "reactstrap": "^9.1.5",
+    "sass": "^1.56.2",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/node": "^18.11.14",

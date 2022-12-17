@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import thumbpng from '../../../public/images/thumb.png';
 import {FiChevronsLeft, FiChevronLeft, FiChevronsRight, FiChevronRight} from 'react-icons/fi';
 import { GetStaticProps } from 'next';
 import { getPrismicClient } from '../../services/prismic'
