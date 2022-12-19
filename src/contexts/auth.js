@@ -94,6 +94,7 @@ function AuthProvider({children}) {
 
 async function storageUser(data) {
   await AsyncStorage.setItem('Auth_user', JSON.stringify(data));
+  console.log(data);
 }
 
 //Fazer logout

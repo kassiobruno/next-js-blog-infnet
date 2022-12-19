@@ -40,7 +40,7 @@ export default function Home({ content }: ContentProps) {
           <section className={styles.ctaText}>
             <h1>{content.title}</h1>
             <span>{content.titleContent}</span><br/>
-            <a href="/login">
+            <a href="/account/signin">
               <button>
                 COMEÇAR AGORA!
               </button>
@@ -85,7 +85,7 @@ export default function Home({ content }: ContentProps) {
           <h2>Mais de <span className={styles.alunos}>15 mil</span> já levaram sua carreira ao próximo nivel.</h2>
           <span>E você vai perder a chance de evoluir de uma vez por todas?</span>
 
-          <Link href="/login">
+          <Link href="/account/signin">
             <button>COMEÇAR AGORA</button>
           </Link>
         </div>

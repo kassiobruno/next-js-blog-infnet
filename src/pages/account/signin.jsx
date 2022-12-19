@@ -1,5 +1,5 @@
 import {useState, useContext} from 'react';
-import {AuthContext} from '../../contexts/auth';
+import {AuthContext} from '../../contexts/auth'
 import styles from './styles.module.scss';
 import ActivityIndicator from 'react-activity-indicator';
 import { useRouter } from 'next/router';
@@ -16,7 +16,7 @@ export default function SignIn() {
   }
 
   function handleClick() {
-    router.push('/signup');
+    router.push('/account/signup');
   }
 
   return (
@@ -56,7 +56,7 @@ export default function SignIn() {
       </button>
 
       <button className={styles.cadButton} onClick={handleClick}>
-        <text className={styles.cadText}>Cadastre-se</text>
+        <p className={styles.cadText}>Cadastre-se</p>
       </button>
 
     </div>

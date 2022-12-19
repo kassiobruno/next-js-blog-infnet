@@ -1,10 +1,14 @@
 import styles from './styles.module.scss';
 import Image from 'next/image';
 import logo from '../../../public/images/logo.png';
+import { AuthContext } from '../../contexts/auth';
 
 import {ActiveLink} from '../ActiveLink';
+import { useContext } from 'react';
 
 export default function Header(){
+  const {user, signOut}:any = useContext(AuthContext);
+  
   return(
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
@@ -16,7 +20,7 @@ export default function Header(){
         </ActiveLink>
 
         <nav>
-          <ActiveLink legacyBehavior href="/" activeClassName={styles.active}>
+         <ActiveLink legacyBehavior href="/" activeClassName={styles.active}>
             <a>Home</a>
           </ActiveLink>
 
@@ -24,12 +28,10 @@ export default function Header(){
             <a>Conteúdos</a>
           </ActiveLink>
 
-          <ActiveLink legacyBehavior href="/sobre" activeClassName={styles.active}>
-            <a>Quem somos?</a>
-          </ActiveLink>
         </nav>
 
-        <a className={styles.readyButton} type="button" href="/login">Fazer Login</a>
+        <a className={styles.readyButton} type="button">Bem vindo(a) {user && user.nome}</a>
+        <a  className={styles.readyButton} type="button" onClick={signOut}>Sair</a>
 
       </div>
     </header>

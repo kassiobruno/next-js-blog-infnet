@@ -61,6 +61,7 @@
   color: var(--white);
   font-weight: bold;
   transition: filter 0.2s;
+  cursor: pointer;
 
   &:hover{
     filter: brightness(1.1)

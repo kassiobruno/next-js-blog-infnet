@@ -8,6 +8,7 @@ import { GetStaticProps } from 'next';
 import { getPrismicClient } from '../../services/prismic'
 import Prismic from '@prismicio/client';
 import * as prismicH from '@prismicio/helpers'
+import Header from '../../components/Header';
 
 type Post = {
   slug: string;
