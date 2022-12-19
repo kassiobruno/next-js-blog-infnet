@@ -1,0 +1,52 @@
+.containerLogin {
+  background-color: var(--gray-900);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.formGroup {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0 5px 0;
+  margin: 5px;
+  color: var(--gray-100);
+  font-weight: 400;
+}
+
+.submitButton {
+  background-color: var(--blue-900);
+  width: 200px;
+  height: 40px;
+  border-radius: 50px; 
+  margin-top: 10px;
+}
+
+.submitText {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.cadButton {
+  background-color: var(--blue-900);
+  width: 200px;
+  height: 40px;
+  border-radius: 50px;
+  margin-top: 5px;
+}
+
+.cadText {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.input{
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+}

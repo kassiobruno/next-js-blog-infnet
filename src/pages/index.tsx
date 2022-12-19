@@ -40,7 +40,7 @@ export default function Home({ content }: ContentProps) {
           <section className={styles.ctaText}>
             <h1>{content.title}</h1>
             <span>{content.titleContent}</span><br/>
-            <a href={content.linkAction}>
+            <a href="/login">
               <button>
                 COMEÇAR AGORA!
               </button>

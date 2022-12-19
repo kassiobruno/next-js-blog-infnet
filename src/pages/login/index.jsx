@@ -1,7 +1,6 @@
 import {useState, useContext} from 'react';
 import {AuthContext} from '../../contexts/auth';
-import {Input, Label} from 'reactstrap';
-import { ContainerLogin, FormGroup, SubmitButton, SubmitText, CadButton, CadText } from './styles';
+import styles from './styles.module.scss';
 import ActivityIndicator from 'react-activity-indicator';
 import { useRouter } from 'next/router';
 
@@ -21,45 +20,45 @@ export default function SignIn() {
   }
 
   return (
-    <ContainerLogin>
+    <div className={styles.containerLogin}>
 
-      <FormGroup>
-        <Label>
+      <div className={styles.formGroup}>
+        <label>
           Email
-          <Input
+          <br/><input className={styles.input}
           name="email"
           placeholder='Digite seu E-mail'
           value={email}
           type="email"
           onChange={e => setEmail(e.target.value)} />
-        </Label>
-      </FormGroup>
+        </label>
+      </div>
 
-      <FormGroup>
-        <Label>
+      <div className={styles.formGroup}>
+        <label>
           Senha
-          <Input
+          <br/><input className={styles.input}
           name="password"
           placeholder='Digite sua senha'
           value={password}
           type="password"
           onChange={(e => setPassword(e.target.value))}
            />
-        </Label>
-      </FormGroup>
+        </label>
+      </div>
 
-      <SubmitButton type="submit" onClick={handleLogin}>
+      <button className={styles.submitButton} type="submit" onClick={handleLogin} >
         {loadingAuth ? (
-          <ActivityIndicator number={4} duration={200} activeColor="#0070bf" borderWidth={2} borderRadius="50%" diameter={25} />
+          <ActivityIndicator number={7} duration={200} activeColor="#FFF" borderWidth={2} borderRadius="40%" diameter={15}/>
         ) : (
-          <SubmitText>Acessar</SubmitText>
+          <text className={styles.submitText}>Acessar</text>
         )}
-      </SubmitButton>
+      </button>
 
-      <CadButton onClick={handleClick}>
-        <CadText>Cadastre-se</CadText>
-      </CadButton>
+      <button className={styles.cadButton} onClick={handleClick}>
+        <text className={styles.cadText}>Cadastre-se</text>
+      </button>
 
-    </ContainerLogin>
+    </div>
   )
 }
