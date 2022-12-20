@@ -1,6 +1,7 @@
 import React, { useState, createContext, useEffect } from 'react';
 import firebase from '../services/firebaseConnection.ts';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useRouter } from 'next/router';
 
 export const AuthContext = createContext({});
 
@@ -9,6 +10,7 @@ function AuthProvider({children}) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [loadingAuth, setLoadingAuth] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     async function loadStorage(){
@@ -43,6 +45,7 @@ function AuthProvider({children}) {
         setUser(data);
         storageUser(data);
         setLoadingAuth(false);
+        router.push('/posts');
       })
     })
     .catch((error)=> {
@@ -70,6 +73,7 @@ function AuthProvider({children}) {
         setUser(data);
         storageUser(data);
         setLoadingAuth(false);
+        router.push('/posts');
       })
     })
     .catch((error)=> {
